@@ -23,18 +23,34 @@ class Heroi{
         this.tipo = tipo
     }
     atacar() {
-        if (tipo==="guerreiro"){
-            ataque = "espada"
-        } else if (tipo==="mago"){
-            ataque = "magia"
-        } else if (tipo==="monge"){
-            ataque = "artes marciais"
-        } else {
-            ataque = "shuriken"
-        }
-    
-        console.log (`O ${this.tipo} atacou usando ${atacar()}`)
+        let ataque 
+        switch (this.tipo) {
+            case "mago":
+              ataque = "magia";
+              break;
+            case "guerreiro":
+              ataque = "espada";
+              break;
+            case "monge":
+              ataque = "artes marciais";
+              break;
+            case "ninja":
+              ataque = "shuriken";
+              break;
+            default:
+              ataque = " ataque desconhecido";
+          }
+        console.log(`o ${this.tipo} atacou usando ${ataque}`)
     }
-    
 }
+
+const mago = new Heroi("Alucard", 10, "mago")
+const guerreiro = new Heroi ("Sia", 30, "guerreiro")
+const monge = new Heroi ("Bidu", 50, "monge")
+const ninja = new Heroi ("Leo", 60, "ninja")
+
+mago.atacar()
+guerreiro.atacar()
+ninja.atacar()
+monge.atacar()
 

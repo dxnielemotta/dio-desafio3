@@ -32,9 +32,9 @@ class Heroi{
         } else {
             ataque = "shuriken"
         }
-        console.log(`O ${tipo} atacou usando ${ataque}`)
+    
+        console.log (`O ${this.tipo} atacou usando ${atacar()}`)
     }
+    
 }
 
-let meuHeroi = new Heroi("Alucard", 10, "guerreiro")
-console.log (meuHeroi)

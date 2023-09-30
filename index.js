@@ -22,7 +22,18 @@ class Heroi{
         this.idade = idade
         this.tipo = tipo
     }
-    
+    atacar() {
+        if (tipo==="guerreiro"){
+            ataque = "espada"
+        } else if (tipo==="mago"){
+            ataque = "magia"
+        } else if (tipo==="monge"){
+            ataque = "artes marciais"
+        } else {
+            ataque = "shuriken"
+        }
+        console.log(`O ${tipo} atacou usando ${ataque}`)
+    }
 }
 
 let meuHeroi = new Heroi("Alucard", 10, "guerreiro")
